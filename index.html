@@ -59,14 +59,16 @@
             margin-bottom: 20px;
         }
 
-        .newsletter-form {
+
+        .newsletter-section form {
             display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
         }
-
-        .email-input {
+        
+        .newsletter-section form input[type="text"],
+        .newsletter-section form input[type="email"] {
             width: 100%;
             max-width: 350px;
             padding: 12px 20px;
@@ -79,15 +81,15 @@
             transition: border-color 0.3s;
         }
 
-        .email-input::placeholder {
+        .newsletter-section form input::placeholder {
             color: rgba(255, 255, 255, 0.5);
         }
 
-        .email-input:focus {
+        .newsletter-section form input:focus {
             border-color: #fff;
         }
 
-        .submit-button {
+        .newsletter-section form button[type="submit"] {
             padding: 12px 30px;
             background-color: var(--primary-color);
             color: var(--text-dark);
@@ -99,7 +101,7 @@
             transition: transform 0.2s, background-color 0.2s;
         }
 
-        .submit-button:hover {
+        .newsletter-section form button[type="submit"]:hover {
             background-color: #ffeb3b;
             transform: translateY(-2px);
         }
@@ -141,9 +143,9 @@
             <h2>Get the Scoop!</h2>
 
             <form action="https://api.web3forms.com/submit" method="POST">      
-                <input type="hidden" name="access_key" value="e2c1798d-8ce7-42c0-80b8-cf9a695f28da">  
-                <input type="text" name="name" required>
-                <input type="email" name="email" required>
+                <input type="hidden" name="access_key" value="">  
+                <input type="text" name="name" required placeholder="Your Name">
+                <input type="email" name="email" required placeholder="Your Email">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <button type="submit">Submit Form</button>
             </form>
@@ -175,5 +177,6 @@
     </script>
 </body>
 </html>
+
 
 
